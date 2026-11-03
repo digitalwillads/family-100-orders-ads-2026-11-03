@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Family 100 Orders Ads</title>
+<style>
+  :root { --ink:#141414; --cream:#f6f5f3; --white:#fefefe; --fog:#e8e6e3; --gray:#6b6b6b; --accent:#c2533a; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 80px; }
+  h1 { font-size: 30px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -.02em; }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lede { color: var(--gray); margin: 0 0 8px; max-width: 760px; }
+  .status { display: inline-block; margin: 8px 0 28px; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: var(--white); font-size: 13px; font-weight: 600; letter-spacing: .04em; }
+  .ad { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 28px; background: var(--white); border: 1px solid var(--fog); border-radius: 16px; padding: 24px; margin-bottom: 24px; }
+  .media img, .media video { width: 100%; height: auto; display: block; border-radius: 10px; border: 1px solid var(--fog); background: #fff; }
+  .shapes { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .shapes button { font: inherit; font-size: 13px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--fog); background: var(--cream); cursor: pointer; }
+  .shapes button[aria-pressed="true"] { background: var(--ink); color: var(--white); border-color: var(--ink); }
+  .tag { font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin: 0 0 4px; }
+  h2 { font-size: 22px; margin: 0 0 6px; letter-spacing: -.01em; }
+  .why { color: var(--gray); margin: 0 0 16px; font-size: 15px; }
+  dl { margin: 0; }
+  .field { border-top: 1px solid var(--fog); padding: 10px 0; }
+  dt { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--gray); display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+  dd { margin: 4px 0 0; white-space: pre-wrap; word-break: break-word; }
+  .copy { font: inherit; font-size: 12px; font-weight: 600; letter-spacing: 0; text-transform: none; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--fog); background: var(--cream); cursor: pointer; color: var(--ink); }
+  .note { background: var(--white); border: 1px solid var(--fog); border-radius: 16px; padding: 20px 24px; margin-bottom: 24px; }
+  .note h2 { font-size: 18px; }
+  .note ul { margin: 8px 0 0; padding-left: 20px; }
+  @media (max-width: 760px) { .ad { grid-template-columns: 1fr; padding: 16px; } h1 { font-size: 24px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Family brands: <em>100 new orders in 30 days</em>, on our money</h1>
+  <p class="lede">Five new Meta ads for the new offer. They copy the two Launch 2 ads that got all 13 applications: the Audrey &amp; Bear photo ad (8) and the "Day 1 / Day 30" video (5). Every ad goes to digitalwillads.com/welcome/family-funded-v2/, which now sells the same offer.</p>
+  <span class="status">Not live. Nothing is in Meta yet.</span>
+
+  <div class="note">
+    <h2>Where they go when approved</h2>
+    <ul>
+      <li>A new paused campaign, "Family Ecommerce | TOFU | 100 Orders | Launch 3", so the old $5,000 ads can never run beside them.</li>
+      <li>One ad set with the Launch 2 audience that got 12 of the 13 applications: Facebook "Shops admins", US, ages 25 to 54. Placements: Facebook and Instagram feeds, stories and reels only.</li>
+      <li>It optimizes for "Apply now" clicks, as Launch 2 did.</li>
+    </ul>
+  </div>
+
+  <section id="ads"></section>
+</main>
+<script>
+const LINK = 'https://digitalwillads.com/welcome/family-funded-v2/';
+const TAGS = 'utm_source=facebook&utm_medium=paid&utm_campaign=family-100-orders-launch-3&utm_content={{ad.name}}';
+const ADS = [
+  { id: 'tracker', n: 1, tag: 'Proven format', title: 'The tracker',
+    why: 'The "Day 1 / Day 30" winner, now counting orders instead of dollars.',
+    name: '1. 11/3/26 - 100 Orders Tracker Ad#1 - single',
+    primary: 'Day 1, our money goes in. Day 30, we count your new orders. 100 or you owe nothing. For family brands that already sell.',
+    headline: '100 new orders. Our money.', description: 'Miss it, owe nothing.' },
+  { id: 'tracker', n: 5, video: true, tag: 'Proven format', title: 'The tracker, as video',
+    why: 'Same ad as Ad#1, animated like the original: the day counter runs, orders climb, HIT lands. 8.5 seconds.',
+    name: '1. 11/3/26 - 100 Orders Tracker Ad#5 - video',
+    primary: 'Day 1, our money goes in. Day 30, we count your new orders. 100 or you owe nothing. For family brands that already sell.',
+    headline: '100 new orders. Our money.', description: 'Miss it, owe nothing.' },
+  { id: 'audrey', n: 2, tag: 'Proven format', title: 'Audrey & Bear proof',
+    why: 'The top ad (8 applications). Same photo and headline; only the offer line changed.',
+    name: '1. 11/3/26 - Audrey Acquired Ad#2 - single',
+    primary: 'Audrey & Bear grew with us, then sold in year two. Your store next: 100 new orders in 30 days, on our ad money.',
+    headline: '100 new orders in 30 days', description: 'One brand chosen every Friday' },
+  { id: 'gobe', n: 3, tag: 'New angle', title: 'The offer, straight',
+    why: 'The winning photo layout, with the offer as the headline.',
+    name: '1. 11/3/26 - 100 Orders Straight Ad#3 - single',
+    primary: '100 new orders in 30 days. We pay for the ads. Miss it and you owe nothing. One family brand chosen every Friday.',
+    headline: 'See if your store qualifies', description: 'For stores that already sell' },
+  { id: 'pings', n: 4, tag: 'New angle', title: '100 of these',
+    why: 'New: what 100 new orders look like on the phone.',
+    name: '1. 11/3/26 - 100 Of These Ad#4 - single',
+    primary: 'Picture 100 of these in the next 30 days. We pay for the ads. If they do not come, you owe nothing.',
+    headline: '100 orders, on our money', description: 'Miss it, owe nothing.' },
+];
+const SHAPES = [['1x1', 'Square 1:1'], ['4x5', 'Feed 4:5'], ['9x16', 'Story 9:16']];
+const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const fields = (a) => [
+  ['Ad name', a.name], ['Primary text', a.primary], ['Headline', a.headline], ['Description', a.description],
+  ['Call to action', 'Apply now'], ['Website URL', LINK], ['URL parameters', TAGS],
+  ['Ad set', '1. Shop Admins | 11.3.26 | 5 ads'],
+];
+document.getElementById('ads').innerHTML = ADS.map((a) => {
+  const src = (s) => `${a.id}-${s}.${a.video ? 'mp4' : 'png'}`;
+  const media = a.video
+    ? `<video src="${src('1x1')}" controls muted loop playsinline autoplay></video>`
+    : `<img src="${src('1x1')}" alt="${esc(a.title)}, square">`;
+  return `<article class="ad" data-id="${a.id}" data-video="${a.video ? 1 : 0}">
+    <div class="media">${media}
+      <div class="shapes">${SHAPES.map(([s, label], i) => `<button type="button" data-shape="${s}" aria-pressed="${i === 0}">${label}</button>`).join('')}</div>
+    </div>
+    <div>
+      <p class="tag">Ad#${a.n} &middot; ${a.tag}</p>
+      <h2>${esc(a.title)}</h2>
+      <p class="why">${esc(a.why)}</p>
+      <dl>${fields(a).map(([k, v]) => `<div class="field"><dt>${k}<button type="button" class="copy">Copy</button></dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
+    </div>
+  </article>`;
+}).join('');
+document.addEventListener('click', async (e) => {
+  const shape = e.target.closest('[data-shape]');
+  if (shape) {
+    const ad = shape.closest('.ad'), el = ad.querySelector('.media img, .media video');
+    el.src = `${ad.dataset.id}-${shape.dataset.shape}.${ad.dataset.video === '1' ? 'mp4' : 'png'}`;
+    ad.querySelectorAll('[data-shape]').forEach((b) => b.setAttribute('aria-pressed', String(b === shape)));
+  }
+  const copy = e.target.closest('.copy');
+  if (copy) {
+    const text = copy.closest('.field').querySelector('dd').textContent;
+    try { await navigator.clipboard.writeText(text); copy.textContent = 'Copied'; }
+    catch { copy.textContent = 'Select and copy'; }
+    setTimeout(() => { copy.textContent = 'Copy'; }, 1500);
+  }
+});
+</script>
+</body>
+</html>
